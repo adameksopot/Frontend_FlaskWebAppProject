@@ -1,0 +1,75 @@
+<!-- quiz/templates/index.html -->
+<html>
+  <head>
+    <title>Ankieta ETI</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style62.css') }}">
+  </head>
+<body>
+
+  <h1>Ankieta dotycząca uzależnienia od Internetu<br> wśród studentów ETI</h1>
+  <h2>1 - nigdy; 2 - rzadko; 3 - czasem; 4 - często; 5 - zawsze;</h2>
+
+ <!-- formularz z quizem -->
+   <form name="form1" method="POST" action="http://localhost:5001/ankieta-196f6/us-central1/submitAns" >
+        <!-- przeglądamy listę pytań -->
+
+       {% for d in pytania2 %}
+         <p>
+           {{ d.pytanie }}
+           <br>
+           {% set onr = loop.index0 %}
+           {% for o in d.odpowiedzi %}
+            <label>
+                <input type="radio" value="{{ o }}" name="{{ onr }}">
+                {{ o }}
+            </label>
+
+           {% endfor %}
+        </p>
+       {% endfor %}
+
+
+       Posiadam konto spolecznosciowe<br>
+       <input type="radio" name="24" id="tak" onclick="if(this.checked){myFunction()}" value="tak">tak
+       <input type="radio" name="24" id="nie" onclick="if(this.checked){myFunction1()}" value="nie">nie
+       <br>
+
+       <div id="myDIV">
+       {% for a in pytania4 %}
+        <p>
+            {{ a.pytanie }}
+            <br>
+            {% set inr = loop.index0 + 25 %}
+            {% for o in a.odpowiedzi4 %}
+                 <label>
+                  <input type="checkbox" value="{{ o }}" name="{{ inr }}">
+                 {{ o }}
+                </label>
+            {% endfor %}
+            </p>
+       {% endfor %}
+       </div>
+
+       <!-- przycisk wysyłający wypełniony formularz -->
+        <button type="submit" id="lol">Wyślij</button>
+
+   </form>
+<audio id="myaudio" src="https://ia601703.us.archive.org/15/items/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3" controls ></audio>
+    <script>
+
+        var vid = document.getElementById("myaudio");
+        vid.autoplay = true;
+        vid.play();
+
+        document.getElementById("myDIV").setAttribute("hidden","");
+        function myFunction(){
+        document.getElementById("myDIV").removeAttribute("hidden");
+        }
+        function myFunction1(){
+        document.getElementById("myDIV").setAttribute("hidden","");
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* todo/static/style.css */
+
+body { margin-top: 20px; background-color: #DDEEFF; }
+audio {
+  width: 100%;
+  height: 20px;
+  align: center;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+h1 { 
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #99CCFF;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  width: 700px; 
+  text-align:center;
+}
+  
+h2 { 
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #99CCFF;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  width: 700px; 
+  text-align:center;
+}
+
+ol { text-align: left; }
+em { font-size: 11px; margin-left: 10px; }
+form {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #99CCFF;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  width: 700px;
+}
+
+}
+li { margin-bottom: 5px; }
+button {
+  padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size: 15px/1.5em;
+  display: inline-block;
+  margin: 4px 2px;
+  border: 1px #0069D2;
+  border-radius: 12px;
+  width: 100%;
+}
+
+button:hover {background-color: #105EBC}
+
+button:active {
+  background-color: #105EBC;
+  box-shadow: 0 5px #6B6B6B;
+  transform: translateY(4px);
+}
+.error { color: red; }
+.success { color: green; }
+.done { text-decoration: line-through; }
